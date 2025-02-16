@@ -1,5 +1,8 @@
-﻿#include <iostream>
-#include <string>//to use String 
+#include "headers/CheckBalance.h"
+#include "headers/Deposit.h"
+#include "headers/Withdrawal.h"
+#include "headers/Login.h"
+#include <iostream>#include <string>//to use String 
 
 using namespace std;
 
