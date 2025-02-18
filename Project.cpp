@@ -90,7 +90,12 @@ int main() {
         cout << "3. Withdraw" << endl;
         cout << "Press: ";
         cin >> choice;
-
+if (cin.fail()) {  
+    cin.clear(); // Clear error state
+    cin.ignore(10000, '\n'); // Discard invalid input
+    cout << "Invalid input! Please enter a number (1-3)." << endl;
+    continue; // Restart loop to ask again
+}
         // Process user choice
         switch (choice) {
         case 1:
