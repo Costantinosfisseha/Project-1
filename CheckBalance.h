@@ -2,6 +2,6 @@
 #ifndef CHECKBALANCE_H
 #define CHECKBALANCE_H
 
-double CheckBalance(double balance);
+double CheckBalance(double& balance);
 
 #endif // CHECKBALANCE_H
