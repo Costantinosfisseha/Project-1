@@ -1,15 +1,18 @@
-#include "headers/CheckBalance.h"
-#include "headers/Deposit.h"
-#include "headers/Withdrawal.h"
-#include "headers/Login.h"
-#include <iostream>#include <string>//to use String 
+
+#include <iostream>
+#include <string>//to use String 
+#include "CheckBalance.h"
+#include "Deposit.h"
+#include "Withdrwal.h"
+#include "Login.h"
+#include "balance.h"
 
 using namespace std;
 
 // Function to check balance
-double CheckBalance(double balance) {
+double CheckBalance(double &balance) {
     return balance;
-}
+};
 
 //function to deposit money
 void Deposit(double& balance) {//when passing by reference the function works directly on the original data.
@@ -22,7 +25,7 @@ void Deposit(double& balance) {//when passing by reference the function works di
     }
     balance += amount; //add the deposit to the balance
     cout << "Deposit successful. New balance: " << balance << endl;
-}
+};
 
 //function to withdraw money
 void Withdrawal(double& balance) { //pass by reference: Any changes made to the parameter inside the function will directly modify the original variable outside the function.
@@ -40,7 +43,7 @@ void Withdrawal(double& balance) { //pass by reference: Any changes made to the 
         balance -= amount; //subtract the withdrawal amount from the balance
         cout << "Withdrawal successful. New balance: " << balance << endl;
     }
-}
+};
 
 //function to login
 bool Login() {//Reason for using bool is, it easy because we just check if the username is correct return  true and if not return false
@@ -69,7 +72,7 @@ bool Login() {//Reason for using bool is, it easy because we just check if the u
     //After you have more than 3 attempts
     cout << "You have exceeded the maximum number of attempts. Access denied!" << endl;
     return false;
-}
+};
 
 int main() {
     if (!Login()) {// if the login procees is true or cool
